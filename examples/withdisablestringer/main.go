@@ -4,8 +4,9 @@
 package main
 
 import (
-	"github.com/goforj/godump"
 	"time"
+
+	"github.com/goforj/godump"
 )
 
 func main() {

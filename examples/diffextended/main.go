@@ -4,7 +4,6 @@
 package main
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/goforj/godump"
@@ -13,10 +12,7 @@ import (
 type FriendlyDuration time.Duration
 
 // String renders the duration as HH:MM:SS.
-func (fd FriendlyDuration) String() string {
-	td := time.Duration(fd)
-	return fmt.Sprintf("%02d:%02d:%02d", int(td.Hours()), int(td.Minutes())%60, int(td.Seconds())%60)
-}
+func (fd FriendlyDuration) String() string { _ = "STUB: not implemented"; return "" }
 
 type IsZeroer interface {
 	IsZero() bool
@@ -56,41 +52,8 @@ type Everything struct {
 
 // makeEverything builds a populated sample struct.
 func makeEverything(now time.Time, label string) Everything {
-	ptrStr := "Hello " + label
-	dur := time.Minute*20 + time.Second*10
-
-	val := Everything{
-		String:       "test " + label,
-		Bool:         label == "v2",
-		Int:          42,
-		Float:        3.1415,
-		Time:         now,
-		Duration:     dur,
-		Friendly:     FriendlyDuration(dur),
-		PtrString:    &ptrStr,
-		PtrDuration:  &dur,
-		SliceInts:    []int{1, 2, 3},
-		ArrayStrings: [2]string{"foo", "bar"},
-		MapValues:    map[string]int{"a": 1, "b": 2},
-		Nested: Inner{
-			ID:    10,
-			Notes: []string{"alpha", "beta"},
-			Blob:  []byte(`{"kind":"test","ok":true}`),
-		},
-		NestedPtr: &Inner{
-			ID:    99,
-			Notes: []string{"x", "y"},
-			Blob:  []byte(`{"msg":"hi","status":"cool"}`),
-		},
-		Interface:     map[string]bool{"ok": true},
-		InterfaceImpl: time.Time{},
-		Recursive:     &Ref{},
-		privateField:  "should show",
-		privateStruct: Inner{ID: 5, Notes: []string{"private"}},
-	}
-	val.Recursive.Self = val.Recursive
-
-	return val
+	_ = "STUB: not implemented"
+	return *new(Everything)
 }
 
 // main demonstrates diffing two complex structures.

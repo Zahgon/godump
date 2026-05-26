@@ -5,8 +5,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/goforj/godump"
 	"os"
+
+	"github.com/goforj/godump"
 )
 
 type Profile struct {

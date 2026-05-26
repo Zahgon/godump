@@ -4,18 +4,15 @@
 package main
 
 import (
-	"fmt"
-	"github.com/goforj/godump"
 	"time"
+
+	"github.com/goforj/godump"
 )
 
 type FriendlyDuration time.Duration
 
 // String renders the duration as HH:MM:SS.
-func (fd FriendlyDuration) String() string {
-	td := time.Duration(fd)
-	return fmt.Sprintf("%02d:%02d:%02d", int(td.Hours()), int(td.Minutes())%60, int(td.Seconds())%60)
-}
+func (fd FriendlyDuration) String() string { _ = "STUB: not implemented"; return "" }
 
 // main demonstrates a kitchen-sink dump.
 func main() {

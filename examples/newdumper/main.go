@@ -4,8 +4,9 @@
 package main
 
 import (
-	"github.com/goforj/godump"
 	"os"
+
+	"github.com/goforj/godump"
 )
 
 func main() {
